@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap');
+
+body {
+	font-family: 'Roboto', 'Open Sans', sans-serif;
+}
+
+.tilvana-logo {
+	color: lightgreen;
+	font-weight: bolder;
+	font-size: 1.5em;
+}
+
+.tilvana-logo span {
+	color: green;
+	font-weight: normal;
+}
+
+.tilvana-card-contact {
+	padding-left: 40px;
+	background: yellow;
+}
+
+.tilvana-card-contact>span {
+	font-size: 1em;
+	font-weight: bolder;
+	border-bottom: 2px solid #cccccc;
+}
+
+.tilvana-card-contact>p {
+	font-size: .9em;
+}
+
+.tilvana-card-contact>p>span.title {
+	font-weight: bolder;
+}
+
+.tilvana-header-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; }
+  .tilvana-header-profile .tilvana-img-user {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px; }
+    @media (min-width: 576px) {
+      .tilvana-header-profile .tilvana-img-user {
+        width: 80px;
+        height: 80px; } }
+    .tilvana-header-profile .tilvana-img-user::after {
+      display: none; }
+  .tilvana-header-profile h6 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1c273c;
+    margin-bottom: 0; }
+    @media (min-width: 576px) {
+      .tilvana-header-profile h6 {
+        font-size: 1.2em; } }
+  .tilvana-header-profile span {
+    display: block;
+    font-size: .8em; }
+	
+.tilvana-stage {
+	color: white;
+	background-color: darkblue;
+}
+
+.tilvana-content-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #97a3b9;
+  margin-bottom: 10px; }
+  .tilvana-content-breadcrumb span {
+	padding: 1px 3px;
+    font-size: 10px;
+    font-weight: 500;
+    position: relative; }
+

@@ -1,0 +1,13 @@
+span.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ui-autocomplete-loading {
+    background: white url("/assets/img/loading.gif") right center no-repeat;
+}
+
+ul.ui-autocomplete {
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+}
