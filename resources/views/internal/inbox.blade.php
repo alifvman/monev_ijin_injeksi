@@ -68,10 +68,8 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-8 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1nama"
-                                                                                                                                                                                                                 pattern="^[a-zA-Z ]+$" required="" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required=""
-                                                                                                                                                                                                          pattern="^[a-zA-Z ]+$" name="f1jabatan" readonly=""></div>
+                                                                    <div class="col-8 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1nama"required="" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" pattern="^[a-zA-Z ]+$" name="f1jabatan" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -80,8 +78,7 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1alamat"
-                                                                                                                                                                                                                    required="" readonly=""></div>
+                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1alamat" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -90,10 +87,8 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                           name="f1kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kecamatan"
-                                                                                                                                                                                                            required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -102,12 +97,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                           name="f1kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1provinsi"
-                                                                                                                                                                                                             required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kodepos"
-                                                                                                                                                                                                           pattern="^[0-9]*$" minlength="4" maxlength="6" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1provinsi" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kodepos" pattern="^[0-9]*$" minlength="4" maxlength="6" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -116,12 +108,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                          name="f1telp" inputmode="tel" required="" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel"
-                                                                                                                                                                                                              name="f1faks" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1email"
-                                                                                                                                                                                                        required="" inputmode="email" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1telp" inputmode="tel" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f1faks" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1email" required="" inputmode="email" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -133,8 +122,7 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2nama"
-                                                                                                                                                                                                                     required="" readonly=""></div>
+                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2nama" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -143,8 +131,7 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                       name="f2alamat" required="" readonly=""></div>
+                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2alamat" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -153,10 +140,8 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                              name="f2kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatan"
-                                                                                                                                                                                                            required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"  name="f2kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -165,12 +150,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                              name="f2kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsi"
-                                                                                                                                                                                                             required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodepos"
-                                                                                                                                                                                                           minlength="4" maxlength="6" pattern="^[0-9]*$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsi" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodepos" minlength="4" maxlength="6" pattern="^[0-9]*$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -179,32 +161,25 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                             required="" name="f2telp" inputmode="tel" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel"
-                                                                                                                                                                                                              name="f2faks" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="email" name="f2email"
-                                                                                                                                                                                                        required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" name="f2telp" inputmode="tel" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f2faks" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="email" name="f2email" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="form-row">
-                                                            <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KEGIATAN/USAHA PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                      name="f2kegiatan" required="" readonly=""></div>
-                                                            <div class="col text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT KEGIATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required=""
-                                                                                                                                                                                                          name="f2alamatkegiatan" readonly=""></div>
+                                                            <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KEGIATAN/USAHA PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kegiatan" required="" readonly=""></div>
+                                                            <div class="col text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT KEGIATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" name="f2alamatkegiatan" readonly=""></div>
                                                         </div>
                                                     </div>
                                                     <div class="form-group">
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN KEGIATAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                                       name="f2kelurahankegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatankegiatan"
-                                                                                                                                                                                                            required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN KEGIATAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kelurahankegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatankegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -213,12 +188,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN KEGIATAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                                       name="f2kotakegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsikegiatan"
-                                                                                                                                                                                                             required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodeposkegiatan"
-                                                                                                                                                                                                           pattern="^[0-9]*$" minlength="4" maxlength="6" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN KEGIATAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kotakegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsikegiatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodeposkegiatan" pattern="^[0-9]*$" minlength="4" maxlength="6" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -227,12 +199,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">AKTA PENDIRIAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                              name="f2akta" required="" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">NOMOR PERSETUJUAN PRINSIP :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                              name="f2npp" required="" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">NOMOR POKOK WAJIB PAJAK :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                          name="f2npwp" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">AKTA PENDIRIAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2akta" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">NOMOR PERSETUJUAN PRINSIP :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2npp" required="" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">NOMOR POKOK WAJIB PAJAK :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2npwp" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -241,12 +210,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">PRODUKSI PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                        name="f2produksi" required="" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KAPASITAS PRODUKSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                       name="f2kapasitas" required="" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KONTAK NAMA &amp; NOMOR TELEPON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                                  name="f2kontak" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">PRODUKSI PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2produksi" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KAPASITAS PRODUKSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kapasitas" required="" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KONTAK NAMA &amp; NOMOR TELEPON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kontak" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -258,10 +224,8 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-8 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3nama"
-                                                                                                                                                                                                                  required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3jabatan"
-                                                                                                                                                                                                          required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-8 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3nama" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3jabatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -270,8 +234,7 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3alamat"
-                                                                                                                                                                                                                     required="" readonly=""></div>
+                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3alamat" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -280,10 +243,8 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                            name="f3kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kecamatan"
-                                                                                                                                                                                                            required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -292,12 +253,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                            name="f3kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3provinsi"
-                                                                                                                                                                                                             required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kodepos"
-                                                                                                                                                                                                           maxlength="6" minlength="4" pattern="^[0-9]*$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3provinsi" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3kodepos" maxlength="6" minlength="4" pattern="^[0-9]*$" readonly=""></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -306,12 +264,9 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"
-                                                                                                                                                                                                                           inputmode="tel" name="f3telp" required="" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3faks"
-                                                                                                                                                                                                              inputmode="tel" required="" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3email" readonly=""
-                                                                                                                                                                                                        value="">
+                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PENGURUS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f3telp" required="" readonly=""></div>
+                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3faks" inputmode="tel" required="" readonly=""></div>
+                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f3email" readonly="" value="">
                                                                     </div>
                                                                 </div>
                                                             </div>

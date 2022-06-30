@@ -34,7 +34,7 @@ class Member extends Controller
                     'NAMA'      => Auth::user()->name,
                     'EMAIL'     => Auth::user()->email,
                     'POSISI'    => Auth::user()->posisi,
-                    // 'PERAN'     => Auth::user()->peran->nama,
+                    'PERAN'     => Auth::user()->peran->nama,
                     'CREATED'   => Auth::user()->created_at
                 ];
             } else return Redirect::to('/');
