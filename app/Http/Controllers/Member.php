@@ -171,6 +171,7 @@ class Member extends Controller
         $p = Permohonan::where('id', $i)->first()->toArray();
         $z = $p['stage'];
         $t = Permohonan::where('id', $i)->take(1)->update(['stage' => $s]);
+        return $t;
         if ($t) $t = Tracking::create(['permohonan_id' => $i, 'stage' => $z, 'note' => $n]);
         if ($t and ($s==99)) {
             $f1 = Orang::where('id', $p['ref_f1_pemohon'])->first()->makeHidden(['id', 'flag', 'created_at', 'updated_at'])->toArray();
@@ -212,7 +213,7 @@ class Member extends Controller
             foreach ($s as $j) if ($j['posisi'] == $this->USER['POSISI']) $t[] = $j['stage'];
             $p = Permohonan::where('id', $i)->whereIn('stage', $t)->first();
         } else
-            $p = Permohonan::where('id', $i)->first();
+            $p = Permohonan::where('id', $i)->first();;
         $k = array('B'=>"Permohonan Baru", 'U'=>"Perubahan", 'P'=>"Perpanjangan");
         $d = Dokumen::orderBy('grup')->get();
         $s = StageHandler::where('stage', $p['stage'])->first();

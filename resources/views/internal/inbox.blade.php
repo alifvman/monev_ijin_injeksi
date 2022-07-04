@@ -298,109 +298,109 @@
 @endsection
 
 @section('in-style')
-.form-group div input[type="text"] {
-    padding: 0px 10px;
-    border: 0px;
-    margin: 0px;
-    border-bottom: 1px dotted #ddd;
-    border-radius: 0px;
-    font-weight: bold;
-    position: relative;
-    top: -15px;
-    background-color: RGBA(0, 0, 0, 0);
-}
+    .form-group div input[type="text"] {
+        padding: 0px 10px;
+        border: 0px;
+        margin: 0px;
+        border-bottom: 1px dotted #ddd;
+        border-radius: 0px;
+        font-weight: bold;
+        position: relative;
+        top: -15px;
+        background-color: RGBA(0, 0, 0, 0);
+    }
 
-.form-group {
-    margin: 0px;
-}
+    .form-group {
+        margin: 0px;
+    }
 
-.breadcrumb {
-    padding: 0px;
-	background: #D4D4D4;
-	list-style: none;
-	overflow: hidden;
-}
-.breadcrumb>li+li:before {
-	padding: 0;
-}
-.breadcrumb li {
-	float: left;
-}
-.breadcrumb li.active a {
-	background: brown;                   /* fallback color */
-	background: #ffc107 ;
-}
-.breadcrumb li.completed a {
-	background: brown;                   /* fallback color */
-	background: hsla(153, 57%, 51%, 1);
-}
-.breadcrumb li.active a:after {
-	border-left: 30px solid #ffc107 ;
-}
-.breadcrumb li.completed a:after {
-	border-left: 30px solid hsla(153, 57%, 51%, 1);
-}
+    .breadcrumb {
+        padding: 0px;
+    	background: #D4D4D4;
+    	list-style: none;
+    	overflow: hidden;
+    }
+    .breadcrumb>li+li:before {
+    	padding: 0;
+    }
+    .breadcrumb li {
+    	float: left;
+    }
+    .breadcrumb li.active a {
+    	background: brown;                   /* fallback color */
+    	background: #ffc107 ;
+    }
+    .breadcrumb li.completed a {
+    	background: brown;                   /* fallback color */
+    	background: hsla(153, 57%, 51%, 1);
+    }
+    .breadcrumb li.active a:after {
+    	border-left: 30px solid #ffc107 ;
+    }
+    .breadcrumb li.completed a:after {
+    	border-left: 30px solid hsla(153, 57%, 51%, 1);
+    }
 
-.breadcrumb li a {
-	color: white;
-	text-decoration: none;
-	padding: 10px 0 10px 45px;
-	position: relative;
-	display: block;
-	float: left;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-.breadcrumb li a:after {
-	content: " ";
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
-	border-bottom: 50px solid transparent;
-	border-left: 30px solid hsla(0, 0%, 83%, 1);
-	position: absolute;
-	top: 50%;
-	margin-top: -50px;
-	left: 100%;
-	z-index: 2;
-}
-.breadcrumb li a:before {
-	content: " ";
-	display: block;
-	width: 0;
-	height: 0;
-	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
-	border-bottom: 50px solid transparent;
-	border-left: 30px solid white;
-	position: absolute;
-	top: 50%;
-	margin-top: -50px;
-	margin-left: 1px;
-	left: 100%;
-	z-index: 1;
-}
-.breadcrumb li:first-child a {
-	padding-left: 15px;
-}
-.breadcrumb li a:hover { background: #ffc107  ; }
-.breadcrumb li a:hover:after { border-left-color: #ffc107   !important; }
+    .breadcrumb li a {
+    	color: white;
+    	text-decoration: none;
+    	padding: 10px 0 10px 45px;
+    	position: relative;
+    	display: block;
+    	float: left;
+        font-size: 11px;
+        text-transform: uppercase;
+    }
+    .breadcrumb li a:after {
+    	content: " ";
+    	display: block;
+    	width: 0;
+    	height: 0;
+    	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    	border-bottom: 50px solid transparent;
+    	border-left: 30px solid hsla(0, 0%, 83%, 1);
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -50px;
+    	left: 100%;
+    	z-index: 2;
+    }
+    .breadcrumb li a:before {
+    	content: " ";
+    	display: block;
+    	width: 0;
+    	height: 0;
+    	border-top: 50px solid transparent;           /* Go big on the size, and let overflow hide */
+    	border-bottom: 50px solid transparent;
+    	border-left: 30px solid white;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -50px;
+    	margin-left: 1px;
+    	left: 100%;
+    	z-index: 1;
+    }
+    .breadcrumb li:first-child a {
+    	padding-left: 15px;
+    }
+    .breadcrumb li a:hover { background: #ffc107  ; }
+    .breadcrumb li a:hover:after { border-left-color: #ffc107   !important; }
 
-.bd-example-modal-lg .modal-dialog{
-    display: table;
-    position: relative;
-    margin: 0 auto;
-    top: calc(50% - 24px);
-}
+    .bd-example-modal-lg .modal-dialog{
+        display: table;
+        position: relative;
+        margin: 0 auto;
+        top: calc(50% - 24px);
+    }
 
-.bd-example-modal-lg .modal-dialog .modal-content{
-    background-color: transparent;
-    border: none;
-}
+    .bd-example-modal-lg .modal-dialog .modal-content{
+        background-color: transparent;
+        border: none;
+    }
 
-#application {
-    position: relative;
-}
+    #application {
+        position: relative;
+    }
 @endsection
 
 @section('in-script')
@@ -438,7 +438,7 @@
     }
 
     function processApp(action) {
-//        console.log('app_id: '+app_id+' action: '+action+' next_stage: '+next_stage+' reroute_stage: '+reroute_stage+' catatan: '+$('[name="catatan"]').val());
+       // console.log('app_id: '+app_id+' action: '+action+' next_stage: '+next_stage+' reroute_stage: '+reroute_stage+' catatan: '+$('[name="catatan"]').val());
         let ra = (action=='n' ? next_stage : reroute_stage);
         let nt = $('[name="catatan"]').val();
         $.post('/application/update', {_token: "{{ csrf_token() }}", id: app_id, ra: ra, nt: nt}, function(response) {
@@ -461,7 +461,6 @@
         $.post('/application/detail', {_token: "{{ csrf_token() }}", id: id}, function(response) {
             if (response.error === 0) {
                 let d = response.data;
-
 
                 jQuery.each(d.staging, function(i, t) {
                 let e = $('#BC'+i+' a');
