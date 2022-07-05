@@ -119,6 +119,7 @@ class Account extends Controller
             return Redirect::to('/')->withErrors(['Email sudah terdaftar dalam sistem.'])->withInput($request->except('password'));
         $u = User::create([
             'nama'     => $request->input('nama'),
+            'posisi'   => 'BARU',
             'email'    => $request->input('email'),
             'password' => Hash::make($request->input('password')),
             'token'    => base64_encode('VRFEML'. $request->input('email') . Hash::make($request->input('password')))

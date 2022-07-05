@@ -51,31 +51,31 @@ class Member extends Controller
             if (is_null($o))
                 return view('applicant.error')->with(['error'=>'PMH.O']);
             $p = Permohonan::where('ref_f3_pengurus', $this->USER['ID'])->where('stage', '>', -100)->where('stage', '<', 99)->first();
-            if (intval($p['stage']) < 0) {
-                $s = StageHandler::where('stage', ($p['stage']*-1))->get(['nama'])->first()->toArray();
-                $p['status'] = $s['nama'];
-                return view('applicant.status')->with(['USER' => $this->USER, 'stage' => $p['stage'], 'data' => $p]);
-            }
             $d = Dokumen::orderBy('grup')->get();
             $x = [];
             $x['f3'] = Orang::where('email', $this->USER['EMAIL'])->first()->toArray();
             if (is_null($p))
                 return view('applicant.form')->with(['USER' => $this->USER, 'dokumen' => $d, 'data' => $x]);
+            if (intval($p['stage']) < 0) {
+                $s = StageHandler::where('stage', ($p['stage']*-1))->get(['nama'])->first()->toArray();
+                $p['status'] = $s['nama'];
+                return view('applicant.status')->with(['USER' => $this->USER, 'stage' => $p['stage'], 'data' => $p]);
+            }
             $j = array('B'=>"Permohonan Baru", 'U'=>"Perubahan", 'P'=>"Perpanjangan");
             $s = StageHandler::where('stage', $p['stage'])->get(['nama'])->first()->toArray();
             if ($p['stage']==99)
                 $z = 100;
             else
                 $z = intval(($p['stage']/14)*100);
-            $x['id'] = $p['id'];
-            $x['f1'] = Orang::where('id', $p['ref_f1_pemohon'])->first()->toArray();
-            $x['f2'] = Perusahaan::where('id', $p['ref_f2_perusahaan'])->first()->toArray();
-            $x['dokumen'] = DokumenPermohonan::where('permohonan_id', $p['id'])->get()->toArray();
-            $x['status'] =  $s['nama'] . ' ( '.$z.'% selesai )';
-            $x['jenis'] = $p['jenis'];
-            $x['stage'] = $p['stage'];
-            $x['permohonan'] = $j[$p['jenis']];
-            return view('applicant.status')->with(['USER' => $this->USER, 'dokumen' => $d, 'stage' => $p['stage'], 'data' => $x]);
+                $x['id'] = $p['id'];
+                $x['f1'] = Orang::where('id', $p['ref_f1_pemohon'])->first()->toArray();
+                $x['f2'] = Perusahaan::where('id', $p['ref_f2_perusahaan'])->first()->toArray();
+                $x['dokumen'] = DokumenPermohonan::where('permohonan_id', $p['id'])->get()->toArray();
+                $x['status'] =  $s['nama'] . ' ( '.$z.'% selesai )';
+                $x['jenis'] = $p['jenis'];
+                $x['stage'] = $p['stage'];
+                $x['permohonan'] = $j[$p['jenis']];
+                return view('applicant.status')->with(['USER' => $this->USER, 'dokumen' => $d, 'stage' => $p['stage'], 'data' => $x]);
         } else {
             $s = StageHandler::get(['stage', 'nama', 'bread', 'posisi']);
             $t = [];
@@ -113,7 +113,7 @@ class Member extends Controller
     public function userman(Request $request) {
         if ($this->USER['POSISI']=='KSD') {
             $d = [];
-            $d['peran'] = Peran::where('posisi', '<>', 'PMH')->get()->makeHidden(['flag', 'created_at', 'updated_at'])->toArray();
+            $d['peran'] = Peran::get()->toArray();
             $u = User::where('posisi', '<>', 'PMH')->get()->makeHidden(['flag', 'created_at', 'updated_at']);
             $u->load('peran');
             $d['user'] = $u->toArray();
@@ -165,13 +165,14 @@ class Member extends Controller
         $i = $request['id'];
         $s = $request['ra'];
         $n = $request['nt'];
-        $z = StageHandler::where('stage', $s)->first()->toArray();
-        $z = User::where('posisi', $z['posisi'])->first()->toArray();
-        $e = $z['email'];
+        if ($s != 99) {
+            $z = StageHandler::where('stage', $s)->first()->toArray();
+            $z = User::where('posisi', $z['posisi'])->first()->toArray();
+            $e = $z['email'];
+        }
         $p = Permohonan::where('id', $i)->first()->toArray();
         $z = $p['stage'];
         $t = Permohonan::where('id', $i)->take(1)->update(['stage' => $s]);
-        return $t;
         if ($t) $t = Tracking::create(['permohonan_id' => $i, 'stage' => $z, 'note' => $n]);
         if ($t and ($s==99)) {
             $f1 = Orang::where('id', $p['ref_f1_pemohon'])->first()->makeHidden(['id', 'flag', 'created_at', 'updated_at'])->toArray();
@@ -183,7 +184,7 @@ class Member extends Controller
             foreach ($f3 as $key => $value) $m['f3'.$key] = $value;
             $t = Arsip::create($m);
         }
-        if ($t)
+        if ($s != 99)
         {
             dispatch(new SendNotificationEmail($e));
         }
