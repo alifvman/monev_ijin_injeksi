@@ -2,50 +2,69 @@
 
 @section('content')
 
+                    <style type="text/css">
+                        .tiang {
+                            width: 2px;
+                            height: 87%;
+                            position: absolute;
+                            top: 95px;
+                            left: 18px;
+                            background: #d8d8d8;
+                        }
+                        .VLmetq {
+                            display: none;
+                        }
+                        .buleud {
+                            width: 15px;
+                            height: 15px;
+                            margin: 5px 0 0 0;
+                            flex-shrink: 0;
+                            z-index: 1;
+                            border-radius: 50%;
+                            background: #d8d8d8;
+                        }
+                        .buleud {
+                            background: white;
+                        }
+                    </style>
+
                     <div class="row">
                         <div class="col-2">
                             <div class="card mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">
-@if(count($apps)==0)
-    Tidak Ada
-@else
-    <span id="counter">{{ count($apps) }}</span>
-@endif
-                                        Permohonan
+                                        Progress
                                     </h6>
                                 </div>
                                 <div class="card-body py-0 bg-dark" style="padding-left: 0px;padding-right: 0px;">
-@foreach($apps as $a)
-                                    <a id="APP{{ $a['id'] }}" class="d-flex align-items-xl-center apps" href="javascript:showApp({{ $a['id'] }})" style="padding:15px;width: 100%;color: RGBA(255,255,255,0.75);font-size: 11px;border-top: 1px dotted RGBA(255,255,255,0.25);">
-                                        <div><i class="far fa-file-alt" style="margin-right: 10px;font-size: 18px;"></i></div>
-                                        <div style="height: 27px;width: 100%;">
-                                            <div class="row">
-                                                <div class="col"><span>{{ $a['nama'] }}</span></div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <p style="font-size: 8px;">#{{ chr(intval($a['created_at']->format('Y'))-2020+65) }}{{ chr(intval($a['created_at']->format('m'))-1+65) }}{{ sprintf("%03d", $a['id']) }}</p>
-                                                </div>
-                                                <div class="col text-right">
-                                                    <p style="font-size: 8px;text-transform: uppercase;">{{ $a['created_at']->format('d M Y') }}</p>
+                                    <div style="width: 100%;padding-left: 11px;padding-right: 15px;" class="container">
+                                        <br>
+                                        @foreach ($STAGES as $stage)
+                                            <div>
+                                                <div class="tiang"></div>
+                                                <div style="display: flex; padding-bottom: 15px;">
+                                                    <div class="buleud"></div>
+                                                    <div style="padding-left: 10px;">
+                                                        <span style="color: white">{{ $stage->nama }}</span>
+                                                        <span></span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </a>
-@endforeach
+                                        @endforeach
+                                        <br>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-10">
                             <div id="application" class="card mb-4">
                                 <div class="card-body py-3">
-                                    <ul class="breadcrumb">
+                                    <!-- <ul class="breadcrumb">
                                         <li><a href="javascript:void(0);" style="width:30px"><span id="loader" class="spinner-border d-none" style="color:black; width:.75rem; height:.75rem;" role="status" aria-hidden="true"></span>&nbsp;</a></li>
-                                    @foreach ($STAGES as $stage)
-                                        <li id="BC{{ $stage['stage'] }}"><a href="javascript:void(0);"  data-toggle="tooltip" data-html="true" ii-original-title="{{ $stage['nama'] }}" title="{{ $stage['nama'] }}">{{ $stage['bread'] }}</a></li>
-@endforeach
-                                    </ul>
+                                        @foreach ($STAGES as $stage)
+                                            <li id="BC{{ $stage['stage'] }}"><a href="javascript:void(0);"  data-toggle="tooltip" data-html="true" ii-original-title="{{ $stage['nama'] }}" title="{{ $stage['nama'] }}">{{ $stage['bread'] }}</a></li>
+                                        @endforeach
+                                    </ul> -->
 
                                     <section class="page-section cta">
                                         <div class="row">

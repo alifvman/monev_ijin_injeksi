@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="/assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="/assets/css/styles.min.css">
+    <link rel="stylesheet" href="/assets/css/dataTables.bootstrap4.min.css">
 
 @if (View::hasSection('links'))
 @yield('links')
@@ -31,14 +32,20 @@
     <div id="wrapper">
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
-                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="min-height: 100px;">
                     <div class="container-fluid">
-                        <form action="/search" method="post" class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div align="center">
+                            <h6 align="left" style="color: black;">
+                                <img src="/assets/img/logo-lhk.png" style="width: 69px;margin-right: 15px;">
+                                KEMENTRIAN LINGKUNGAN HIDUP DAN KEHUTANAN REPUBLIK INDONESIA
+                            </h6>
+                        </div>
+                        <!-- <form action="/search" method="post" class="form-inline d-none d-sm-inline-block mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             @CSRF
                             <div class="input-group"><input class="bg-light form-control border-0 small" type="text" placeholder="Mencari permohonan di sini ..." name="keyword" required>
                                 <div class="input-group-append"><button class="btn btn-primary py-0" type="submit"><i class="fas fa-search"></i></button></div>
                             </div>
-                        </form>
+                        </form> -->
                         <ul class="nav navbar-nav flex-nowrap ml-auto">
                             <li class="nav-item dropdown d-sm-none no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fas fa-search"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu" aria-labelledby="searchDropdown">
@@ -51,7 +58,7 @@
                             </li>
 
                             <li class="nav-item dropdown no-arrow mx-1" role="presentation">
-                            <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="fab fa-windows fa-fw" style="color: rgb(0,128,0);"></i></a>
+                            <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span style="color: black;">MENU</span><i class="fab fa-windows fa-fw" style="color: rgb(0,128,0); margin-left: 10px;"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-list dropdown-menu-right animated--grow-in"
                                      role="menu">
                                     <h6 class="dropdown-header">Menu</h6>
@@ -88,10 +95,19 @@
                             <div class="d-none d-sm-block topbar-divider"></div>
 
                             <li class="nav-item dropdown no-arrow" role="presentation">
-                            <li class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">{{ $USER['NAMA'] }} &mdash; </span></a>
-                                <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"
-                                     role="menu"><a class="dropdown-item" role="presentation" href="/account/settings"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
-                                    <div class="dropdown-divider"></div><a class="dropdown-item" role="presentation" href="/account/logout"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a></div>
+                            <li class="nav-item dropdown no-arrow">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                    <img class="nav-user-photo" src="/assets/img/avatar2.png" alt="" style="margin-right: 10px" /> 
+                                    <span class="d-none d-lg-inline mr-2 text-gray-600 small">{{ $USER['NAMA'] }} </span>
+                                    <i style='font-size:24px' class='fas'>&#xf107;</i>
+                                </a>
+                                <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in" role="menu">
+                                    <a class="dropdown-item" role="presentation" href="/account/settings"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" role="presentation" href="/account/logout">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout
+                                    </a>
+                                </div>
                             </li>
                             </li>
 
@@ -115,6 +131,8 @@
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/jquery.easing.js"></script>
+    <script src="/assets/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/js/jquery.dataTables.bootstrap.js"></script>
 @if (View::hasSection('scripts'))
 @yield('scripts')
 @endif

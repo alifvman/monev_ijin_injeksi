@@ -23,6 +23,10 @@ Route::get('/home', [
     'as' => 'home',
     'uses' => 'Member@home']);
 
+Route::get('/prosses/{object}', [
+    'as' => 'prosses',
+    'uses' => 'Member@prosses']);
+
 Route::get('/dashboard', [
     'as' => 'dashboard',
     'uses' => 'Member@dashboard']);

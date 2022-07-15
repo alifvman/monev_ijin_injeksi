@@ -20,18 +20,19 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Crypt;
 
 class Member extends Controller
 {
     private $USER   = null;
-    private $ROUTES = ['home', 'dashboard', 'userman', 'updaterole', 'settings', 'submission', 'autocomplete', 'data', 'download', 'appdetail', 'appupdate', 'appcancel', 'profile', 'password', 'search'];
+    private $ROUTES = ['home', 'prosses', 'dashboard', 'userman', 'updaterole', 'settings', 'submission', 'autocomplete', 'data', 'download', 'appdetail', 'appupdate', 'appcancel', 'profile', 'password', 'search'];
 
     public function __construct() {
         $this->middleware(function ($request, $next) {
             if (Auth::Check()) {
                 $this->USER = [
                     'ID'        => Auth::id(),
-                    'NAMA'      => Auth::user()->name,
+                    'NAMA'      => Auth::user()->nama,
                     'EMAIL'     => Auth::user()->email,
                     'POSISI'    => Auth::user()->posisi,
                     'PERAN'     => Auth::user()->peran->nama,
@@ -81,8 +82,75 @@ class Member extends Controller
             $t = [];
             foreach ($s as $i) if ($i['posisi']==$this->USER['POSISI']) $t[] = $i['stage'];
             $p = Permohonan::whereIn('stage', $t)->get();
-            return view('internal.inbox')->with(['USER' => $this->USER, 'STAGES' => $s, 'apps' => $p]);
+            return view('internal.index')->with(['USER' => $this->USER, 'STAGES' => $s, 'apps' => $p]);
         }
+    }
+
+    public function prosses(Request $request, $object)
+    {
+
+        $e = 0;
+        $i = decrypt($object);
+        $t = [];
+        $x = [];
+        $h = [];
+        $s = StageHandler::get(['stage', 'nama', 'bread', 'posisi']);
+        if (!isset($request['mode'])) {
+            foreach ($s as $j) if ($j['posisi'] == $this->USER['POSISI']) $t[] = $j['stage'];
+            $p = Permohonan::where('id', $i)->whereIn('stage', $t)->first();
+        } else
+            $p = Permohonan::where('id', $i)->first();;
+        $k = array('B'=>"Permohonan Baru", 'U'=>"Perubahan", 'P'=>"Perpanjangan");
+        $d = Dokumen::orderBy('grup')->get();
+        $s = StageHandler::where('stage', $p['stage'])->first();
+        $s = is_null($s) ? [] : $s->makeHidden(['id', 'stage', 'posisi', 'bread', 'flag', 'created_at', 'updated_at'])->toArray();
+        $g = array_column(DokumenPermohonan::where('permohonan_id', $p['id'])->get(['dokumen_id'])->toArray(), 'dokumen_id');
+        foreach ($d as $w) if (in_array($w['id'], $g)) $h[] = ['grup'=>$w['grup'], 'nama'=>$w['nama'], 'link'=>$p['id'].':'.$w['id']];
+        $x['id'] = $p['id'];
+        $f = Orang::where('id', $p['ref_f1_pemohon'])->first();
+        $x['f1'] = is_null($f) ? [] : $f->makeHidden(['id', 'flag', 'created_at', 'updated_at'])->toArray();
+        $f = Perusahaan::where('id', $p['ref_f2_perusahaan'])->first();
+        $x['f2'] = is_null($f) ? [] : $f->makeHidden(['id', 'flag', 'created_at', 'updated_at'])->toArray();
+        $f = Orang::where('id', $p['ref_f3_pengurus'])->first();
+        $x['f3'] = is_null($f) ? [] : $f->makeHidden(['id', 'flag', 'created_at', 'updated_at'])->toArray();
+        $x['dokumen'] = $h;
+        $x['jenis'] = $p['jenis'];
+        $x['stage'] = $p['stage'];
+        $x['permohonan'] = $k[$p['jenis']];
+        $x['action'] = $s;
+
+        $t = Tracking::where('permohonan_id', $p['id'])->whereNotNull('note')->get()->makeHidden(['id', 'flag', 'created_at', 'updated_at']); // TODO: secure id, posisi, flag, created_at, updated_at
+        $t->load('peran');
+        $x['tracking'] = $t;
+        $t = Tracking::where('permohonan_id', $p['id'])->get()->makeHidden(['id', 'permohonan_id', 'flag', 'note', 'updated_at']); // TODO: secure id, posisi, flag, created_at, updated_at
+//        $x['staging'] = array_merge(array(array("created_at" => $p['created_at'], "stage" => 0)), $t->toArray());
+        $s = $t->toArray();
+        $x['staging'] = [];
+        if (count($s) > 0)
+        {
+            foreach ($s as $i)
+            {
+                $k = 0; $t = strtotime($p['created_at']);
+                foreach ($s as $j)
+                {
+                    if (($j['stage'] < $i['stage']) && ($j['stage'] > $k))
+                    {
+                        $k = $j['stage'];
+                        $t = strtotime($j['created_at']);
+                    }
+                }
+                $timing = $this->secondsToWords(strtotime($i['created_at']) - $t);
+                $x['staging'][$i['stage']] = ($timing == "") ? "Seketika" : $timing;
+            }
+        }
+
+        $stage = StageHandler::get(['stage', 'nama', 'bread', 'posisi']);
+        $t = [];
+        foreach ($stage as $i) if ($i['posisi'] == $this->USER['POSISI']) $t[] = $i['stage'];
+        $r = ($e!=0) ? ['error' => 1] : ['error' => 0, 'stage' => $s, 'data' => $x];
+        return $r;
+        return view('internal.inbox')->with(['r' => $r, 'STAGES' => $stage, 'USER' => $this->USER]);
+
     }
 
     public function dashboard(Request $request) {
