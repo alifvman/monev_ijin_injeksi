@@ -5,10 +5,10 @@
                     <style type="text/css">
                         .tiang {
                             width: 2px;
-                            height: 87%;
+                            height: 82%;
                             position: absolute;
                             top: 95px;
-                            left: 18px;
+                            left: 17px;
                             background: #d8d8d8;
                         }
                         .VLmetq {
@@ -25,6 +25,10 @@
                         }
                         .buleud {
                             background: white;
+                        }
+                        .stage {
+                            color: white;
+                            font-size: 10px;
                         }
                     </style>
 
@@ -43,9 +47,9 @@
                                             <div>
                                                 <div class="tiang"></div>
                                                 <div style="display: flex; padding-bottom: 15px;">
-                                                    <div class="buleud"></div>
+                                                    <div class="buleud" @if($stage->stage <= $p->stage) style="background: #75f542;" @endif></div>
                                                     <div style="padding-left: 10px;">
-                                                        <span style="color: white">{{ $stage->nama }}</span>
+                                                        <span class="stage" @if($stage->stage <= $p->stage) style="color: #75f542;" @endif>{{ $stage->nama }}</span>
                                                         <span></span>
                                                     </div>
                                                 </div>

@@ -148,8 +148,8 @@ class Member extends Controller
         $t = [];
         foreach ($stage as $i) if ($i['posisi'] == $this->USER['POSISI']) $t[] = $i['stage'];
         $r = ($e!=0) ? ['error' => 1] : ['error' => 0, 'stage' => $s, 'data' => $x];
-        return $r;
-        return view('internal.inbox')->with(['r' => $r, 'STAGES' => $stage, 'USER' => $this->USER]);
+
+        return view('internal.inbox')->with(['r' => $r, 'STAGES' => $stage, 'USER' => $this->USER, 'data' => $x, 'p' => $p]);
 
     }
 
