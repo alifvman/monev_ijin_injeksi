@@ -79,7 +79,7 @@
                                                         <div class="form-row">
                                                             <div class="col text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">JENIS PERMOHONAN :</label>
                                                                 <div class="form-row">
-                                                                    <div class="col-4"><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="permohonan" required="" readonly="" value=""></div>
+                                                                    <div class="col-4"><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="permohonan" required="" readonly="" value="{{ $data['permohonan'] }}"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -91,8 +91,14 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-8 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1nama"required="" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" pattern="^[a-zA-Z ]+$" name="f1jabatan" readonly=""></div>
+                                                                    <div class="col-8 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PEMOHON :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1nama" required="" readonly="" value="{{ $data['f1']['nama'] }}">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">JABATAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" pattern="^[a-zA-Z ]+$" name="f1jabatan" readonly="" value="{{ $data['f1']['jabatan'] }}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -101,7 +107,10 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1alamat" required="" readonly=""></div>
+                                                                    <div class="col-12 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PEMOHON :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1alamat" required="" readonly="" value="{{ $data['f1']['alamat'] }}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -110,8 +119,14 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PEMOHON :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly="" value="{{ $data['f1']['kelurahan'] }}">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly="" value="{{ $data['f1']['kecamatan'] }}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -120,9 +135,18 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1provinsi" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kodepos" pattern="^[0-9]*$" minlength="4" maxlength="6" readonly=""></div>
+                                                                    <div class="col-5 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PEMOHON :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kota" required="" pattern="^[a-zA-Z ]+$" readonly="" value="{{ $data['f1']['kota'] }}">
+                                                                    </div>
+                                                                    <div class="col-5 text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1provinsi" required="" pattern="^[a-zA-Z ]+$" readonly="" value="{{ $data['f1']['provinsi'] }}">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1kodepos" pattern="^[0-9]*$" minlength="4" maxlength="6" readonly="" value="{{ $data['f1']['kodepos'] }}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -131,9 +155,18 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PEMOHON :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1telp" inputmode="tel" required="" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f1faks" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1email" required="" inputmode="email" readonly=""></div>
+                                                                    <div class="col-4 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PEMOHON :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1telp" inputmode="tel" required="" readonly="" value="{{ $data['f1']['telp'] }}">
+                                                                    </div>
+                                                                    <div class="col-4 text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f1faks" readonly=""  value="{{ $data['f1']['faks'] }}">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f1email" required="" inputmode="email" readonly="" value="{{ $data['f1']['email'] }}">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -145,7 +178,10 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2nama" required="" readonly=""></div>
+                                                                    <div class="col-12 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NAMA PERUSAHAAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2nama" required="" readonly="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -154,7 +190,10 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-12 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2alamat" required="" readonly=""></div>
+                                                                    <div class="col-12 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">ALAMAT PERUSAHAAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2alamat" required="" readonly="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -163,8 +202,14 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-6 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"  name="f2kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
+                                                                    <div class="col-6 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">DESA/KELURAHAN PERUSAHAAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;"  name="f2kelurahan" required="" pattern="^[a-zA-Z ]+$" readonly="">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KECAMATAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kecamatan" required="" pattern="^[a-zA-Z ]+$" readonly="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -173,9 +218,18 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-5 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kota" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col-5 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsi" required="" pattern="^[a-zA-Z ]+$" readonly=""></div>
-                                                                    <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodepos" minlength="4" maxlength="6" pattern="^[0-9]*$" readonly=""></div>
+                                                                    <div class="col-5 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">KOTA/KABUPATEN PERUSAHAAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kota" required="" pattern="^[a-zA-Z ]+$" readonly="">
+                                                                    </div>
+                                                                    <div class="col-5 text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">PROVINSI :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2provinsi" required="" pattern="^[a-zA-Z ]+$" readonly="">
+                                                                    </div>
+                                                                    <div class="col text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">KODE POS :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" name="f2kodepos" minlength="4" maxlength="6" pattern="^[0-9]*$" readonly="">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -184,8 +238,12 @@
                                                         <div class="form-row">
                                                             <div class="col">
                                                                 <div class="form-row">
-                                                                    <div class="col-4 text-left"><label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PERUSAHAAN :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" name="f2telp" inputmode="tel" readonly=""></div>
-                                                                    <div class="col-4 text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f2faks" readonly=""></div>
+                                                                    <div class="col-4 text-left">
+                                                                        <label style="font-family: Raleway, sans-serif;font-size: 11px;margin-left: 10px;">NOMOR TELEPON PERUSAHAAN :</label>
+                                                                        <input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" required="" name="f2telp" inputmode="tel" readonly="">
+                                                                    </div>
+                                                                    <div class="col-4 text-left">
+                                                                        <label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">FAKSIMILE :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="tel" name="f2faks" readonly=""></div>
                                                                     <div class="col text-left"><label style="margin-left: 10px;font-size: 11px;font-family: Raleway, sans-serif;">EMAIL :</label><input class="form-control" type="text" style="font-family: Raleway, sans-serif;font-size: 14px;" inputmode="email" name="f2email" required="" readonly=""></div>
                                                                 </div>
                                                             </div>
